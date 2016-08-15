@@ -1,0 +1,10 @@
+/.idea/
+/test/
+
+/.gitignore
+/.publishrc
+/.travis.yml
+/.env
+
+.DS_Store
+npm-debug.log

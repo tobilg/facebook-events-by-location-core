@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "coverPicture": {
+            "type": "string"
+          },
+          "profilePicture": {
+            "type": "string"
+          },
+          "description": {
+            "type": ["string", "null"]
+          },
+          "distance": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "string"
+          },
+          "timeFromNow": {
+            "type": "integer"
+          },
+          "stats": {
+            "type": "object",
+            "properties": {
+              "attending": {
+                "type": "integer"
+              },
+              "declined": {
+                "type": "integer"
+              },
+              "maybe": {
+                "type": "integer"
+              },
+              "noreply": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "attending",
+              "declined",
+              "maybe",
+              "noreply"
+            ]
+          },
+          "venue": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "coverPicture": {
+                "type": "string"
+              },
+              "profilePicture": {
+                "type": "string"
+              },
+              "location": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "latitude": {
+                    "type": "number"
+                  },
+                  "longitude": {
+                    "type": "number"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "street": {
+                    "type": "string"
+                  },
+                  "zip": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "latitude",
+                  "longitude"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "location"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "distance",
+          "startTime",
+          "timeFromNow",
+          "stats",
+          "venue"
+        ]
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "venues": {
+          "type": "integer"
+        },
+        "venuesWithEvents": {
+          "type": "integer"
+        },
+        "events": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "venues",
+        "venuesWithEvents",
+        "events"
+      ]
+    }
+  },
+  "required": [
+    "events",
+    "metadata"
+  ]
+}
