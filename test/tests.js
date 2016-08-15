@@ -15,8 +15,15 @@ chai.config.includeStack = false;
 
 describe("# Testing the facebook-events-by-location-core functionality", function() {
 
-    // Load local Access Token from .env file
-    var env = fs.readFileSync(path.join(__dirname, "../", ".env"), "utf8").split("=");
+    var accessToken = "";
+
+    // Try to load local Access Token from .env file if env variable is not present
+    if (!process.env.ACCESS_TOKEN) {
+        var env = fs.readFileSync(path.join(__dirname, "../", ".env"), "utf8").split("=");
+        accessToken = env[1];
+    } else {
+        accessToken = process.env.ACCESS_TOKEN;
+    }
 
     describe("## Basic functionality testing", function () {
 
@@ -29,7 +36,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
                 "lat": 40.710803,
                 "lng": -73.964040,
                 "distance": 1000,
-                "accessToken": env[1]
+                "accessToken": accessToken
             });
 
             es.search().should.be.fulfilled.and.notify(done);
@@ -51,7 +58,8 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
         it("should return an error if a partial coordinate is used", function (done) {
 
             var es = new EventSearch({
-                "lat": 40.710803
+                "lat": 40.710803,
+                "accessToken": accessToken
             });
 
             es.search().should.be.rejectedWith(2).and.notify(done);
@@ -66,7 +74,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
                 "lat": 40.710803,
                 "lng": -73.964040,
                 "distance": 1000,
-                "accessToken": env[1]
+                "accessToken": accessToken
             });
 
             es.search().then( function (events) {
