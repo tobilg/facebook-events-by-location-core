@@ -32,7 +32,7 @@ To clone the repository, use
 
 The basic usage pattern of this module is the following:
 
-```
+```javascript
 var EventSearch = require("facebook-events-by-location-core");
 
 var es = new EventSearch({
@@ -68,7 +68,7 @@ Non-mandatory parameters
 
 ### Sample output (shortened)
 
-```
+```javascript
 {
 	"events": [{
 		"id": "163958810691757",
