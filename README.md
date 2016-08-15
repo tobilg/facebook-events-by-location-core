@@ -40,12 +40,10 @@ var es = new EventSearch({
     "lng": -73.964040
 });
 
-es.search(function (error, events) {
-    if (error) {
-        console.error(JSON.stringify(error));
-    } else {
-        console.log(JSON.stringify(events));
-    }
+es.search().then(function (events) {
+    console.log(JSON.stringify(events));
+}).catch(function (error) {
+    console.error(JSON.stringify(error));
 });
 ```
 
