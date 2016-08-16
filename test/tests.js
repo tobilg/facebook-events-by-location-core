@@ -18,11 +18,11 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
     var accessToken = "";
 
     // Try to load local Access Token from .env file if env variable is not present
-    if (!process.env.ACCESS_TOKEN) {
+    if (!process.env.FEBL_ACCESS_TOKEN) {
         var env = fs.readFileSync(path.join(__dirname, "../", ".env"), "utf8").split("=");
         accessToken = env[1];
     } else {
-        accessToken = process.env.ACCESS_TOKEN;
+        accessToken = process.env.FEBL_ACCESS_TOKEN;
     }
 
     describe("## Basic functionality testing", function () {

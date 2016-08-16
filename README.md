@@ -1,4 +1,4 @@
-# Search Facebook events by location
+# Search Facebook events by location, distance and search terms
 
 As Facebook has discontinued the FQL query API for all apps created after 2014-04-30, it has gotten much more complicated to get public Facebook events by passing a location.
 
@@ -49,7 +49,7 @@ es.search().then(function (events) {
 
 ### Access Tokens
 
-The above example expects that the `ACCESS_TOKEN` environment variable is set to a valid App Access Token. Otherwise, you need to specify the `accessToken` parameter with the request.
+The above example expects that the `FEBL_ACCESS_TOKEN` environment variable is set to a valid App Access Token. Otherwise, you need to specify the `accessToken` parameter with the request.
 
 ### Parameters
 
@@ -61,7 +61,7 @@ Mandatory parameters are the following:
 Non-mandatory parameters
 
 * `query`: The term(s) on which you want to narrow down your *location search* (this only filters the places, not the events itself!).
-* `access_token`: The **App Access Token** to be used for the requests to the Graph API.
+* `accessToken`: The **App Access Token** to be used for the requests to the Graph API.
 * `distance`: The distance in meters (it makes sense to use smaller distances, like max. 2500). Default is `100`.
 * `sort`: The results can be sorted by `time`, `distance`, `venue` or `popularity`. If omitted, the events will be returned in the order they were received from the Graph API.
 * `version`: The version of the Graph API to use. Default is `v2.5`.
