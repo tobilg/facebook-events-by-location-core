@@ -3,7 +3,7 @@
 // Check if .env file exists, and load values. But do not fail if it doesn't!
 require('dotenv').config({silent: true});
 
-var EventSearch = require("../lib/eventSearch");
+var EventSearch = require("../index");
 var path = require("path");
 var fs = require("fs");
 var chai = require("chai");
@@ -20,8 +20,8 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
 
     var accessToken = process.env.FEBL_ACCESS_TOKEN;
 
-    // clear access token env variable to ensure it will only work when explicitly declared as parameter
-    process.env.FEBL_ACCESS_TOKEN = null;
+    // Reset access token env variable
+    process.env.FEBL_ACCESS_TOKEN = "";
 
     describe("## Basic functionality testing", function () {
 
