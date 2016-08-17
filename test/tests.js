@@ -20,6 +20,8 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
 
     var accessToken = process.env.ACCESS_TOKEN;
 
+    // clear access token env variable to ensure it will only work when explicitly declared as parameter
+    process.env.ACCESS_TOKEN = null;
     describe("## Basic functionality testing", function () {
 
         it("should return a list of events for a popular coordinate (Brooklyn, NY)", function (done) {
