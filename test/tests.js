@@ -1,5 +1,8 @@
 "use strict";
 
+// Check if .env file exists, and load values. But do not fail if it doesn't!
+require('dotenv').config({silent: true});
+
 var EventSearch = require("../lib/eventSearch");
 var path = require("path");
 var fs = require("fs");
@@ -15,15 +18,10 @@ chai.config.includeStack = false;
 
 describe("# Testing the facebook-events-by-location-core functionality", function() {
 
-    var accessToken = "";
+    var accessToken = process.env.FEBL_ACCESS_TOKEN;
 
-    // Try to load local Access Token from .env file if env variable is not present
-    if (!process.env.FEBL_ACCESS_TOKEN) {
-        var env = fs.readFileSync(path.join(__dirname, "../", ".env"), "utf8").split("=");
-        accessToken = env[1];
-    } else {
-        accessToken = process.env.FEBL_ACCESS_TOKEN;
-    }
+    // clear access token env variable to ensure it will only work when explicitly declared as parameter
+    process.env.FEBL_ACCESS_TOKEN = null;
 
     describe("## Basic functionality testing", function () {
 
