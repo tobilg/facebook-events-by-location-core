@@ -64,7 +64,7 @@ Non-mandatory parameters
 * `accessToken`: The **App Access Token** to be used for the requests to the Graph API.
 * `distance`: The distance in meters (it makes sense to use smaller distances, like max. 2500). Default is `100`.
 * `sort`: The results can be sorted by `time`, `distance`, `venue` or `popularity`. If omitted, the events will be returned in the order they were received from the Graph API.
-* `version`: The version of the Graph API to use. Default is `v2.5`.
+* `version`: The version of the Graph API to use. Default is `v2.7`.
 * `since`: The start of the range to filter results. Format is Unix timestamp or `strtotime` data value, as accepted by [FB Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api#time).
 * `until`: The end of the range to filter results.
 
