@@ -13,6 +13,9 @@
           "name": {
             "type": "string"
           },
+          "type": {
+            "type": "string"
+          },
           "coverPicture": {
             "type": "string"
           },
@@ -65,6 +68,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "about": {
+                "type": ["string", "null"]
+              },
+              "emails": {
+                "type": "array"
               },
               "coverPicture": {
                 "type": "string"
