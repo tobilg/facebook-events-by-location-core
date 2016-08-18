@@ -71,36 +71,40 @@ Non-mandatory parameters
 ```javascript
 {
 	"events": [{
-		"id": "163958810691757",
-		"name": "3Bridge Records presents inTRANSIT w/ David Kiss, Deep Woods, Eric Shans",
-		"coverPicture": "https://scontent.xx.fbcdn.net/t31.0-8/s720x720/13679859_10153862492796325_8533542782240254857_o.jpg",
-		"profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-0/c133.0.200.200/p200x200/13872980_10153862492796325_8533542782240254857_n.jpg?oh=a46813bbf28ad7b8bffb88acd82c7c71&oe=581EF037",
-		"description": "Saturday, August 20th.\n\nJoin the 3Bridge Records team for another night of sound and shenanigans - as we send Deep Woods & David Kiss out to Burning Man & belatedly celebrate Slav Ka's debut release on the label - \"Endless\" - out May 14th, featuring a remix by Mr. Shans.\n\nDavid Kiss (House of Yes)\nhttps://soundcloud.com/davidkiss\n\nDeep Woods (3Bridge Records)\nhttps://soundcloud.com/deep-woods\n\nEric Shans (3Bridge Records)\nhttps://soundcloud.com/eric-shans\n\nSlav Ka (3Bridge Records)\nhttps://soundcloud.com/slinkyslava\n\nFree before 12, $10 after (+ 1 comp well drink). $5 presale available on RA.\n\nhttps://www.residentadvisor.net/event.aspx?863815\n\nStay dope, Brooklyn.",
-		"distance": "203",
-		"startTime": "2016-08-20T22:00:00-0400",
-		"timeFromNow": 481946,
-		"stats": {
-			"attending": 44,
-			"declined": 3,
-			"maybe": 88,
-			"noreply": 1250
-		},
-		"venue": {
-			"id": "585713341444399",
-			"name": "TBA Brooklyn",
-			"coverPicture": "https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/13932666_1397749103574148_4391608711361541993_n.png?oh=2d82be3a458d1ce9ac8fab47cdbc6e26&oe=585E6545",
-			"profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/12049351_1300865083262551_8221231831784471629_n.jpg?oh=a30798841ad60dfe5cfabaa4e803c3ad&oe=5854DFB9",
-			"location": {
-				"city": "Brooklyn",
-				"country": "United States",
-				"latitude": 40.711217064583,
-				"longitude": -73.966384349735,
-				"state": "NY",
-				"street": "395 Wythe Ave",
-				"zip": "11249"
-			}
-		}
-	},
+        "id": "913797995409682",
+        "name": "Tom Misch at Baby's All Right - Brooklyn, NY",
+        "type": "public",
+        "coverPicture": "https://scontent.xx.fbcdn.net/t31.0-8/q84/s720x720/13640856_1107200012651875_5165020515859707325_o.jpg",
+        "profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-0/c0.63.200.200/p200x200/13716257_1107200012651875_5165020515859707325_n.jpg?oh=840e5aa7e4c2a882d170934c06909b0f&oe=5852B03A",
+        "description": "Communion Music Presents\nTom Misch\n\nBaby's All Right - Saturday November 5\n\n**SOLD OUT**",
+        "distance": "103",
+        "startTime": "2016-11-05T19:00:00-0400",
+        "endTime": "2016-11-05T23:59:00-0400",
+        "timeFromNow": 6864534,
+        "stats": {
+            "attending": 118,
+            "declined": 0,
+            "maybe": 193,
+            "noreply": 259
+        },
+        "venue": {
+            "id": "460616340718401",
+            "name": "Baby's All Right",
+            "about": "babysallright@gmail.com",
+            "emails": ["babysallright@gmail.com"],
+            "coverPicture": "https://scontent.xx.fbcdn.net/v/t1.0-9/10649483_874901589289872_3338946923837693978_n.jpg?oh=f514ac7ee60c2a7e58158179686bef28&oe=584392F3",
+            "profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/1480734_642185745894792_5820988503650852577_n.png?oh=0ba9012178c119defae67c932d0841bd&oe=5847FD2D",
+            "location": {
+                "city": "Brooklyn",
+                "country": "United States",
+                "latitude": 40.709985,
+                "longitude": -73.963476,
+                "state": "NY",
+                "street": "146 Broadway",
+                "zip": "11211"
+            }
+        }
+    },
 	... 
 	],
 	"metadata": {
