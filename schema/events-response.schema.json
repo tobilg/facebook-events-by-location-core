@@ -33,7 +33,7 @@
           },
           "endTime": {
             "type": ["string", "null"]
-		  },
+          },
           "timeFromNow": {
             "type": "integer"
           },
@@ -73,7 +73,7 @@
                 "type": ["string", "null"]
               },
               "emails": {
-                "type": "array"
+                "type": ["array", "null"]
               },
               "coverPicture": {
                 "type": "string"
