@@ -28,6 +28,9 @@
           "startTime": {
             "type": "string"
           },
+          "endTime": {
+            "type": ["string", "null"]
+		  },
           "timeFromNow": {
             "type": "integer"
           },
