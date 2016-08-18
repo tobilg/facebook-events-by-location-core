@@ -13,6 +13,9 @@
           "name": {
             "type": "string"
           },
+          "type": {
+            "type": "string"
+          },
           "coverPicture": {
             "type": "string"
           },
@@ -27,6 +30,9 @@
           },
           "startTime": {
             "type": "string"
+          },
+          "endTime": {
+            "type": ["string", "null"]
           },
           "timeFromNow": {
             "type": "integer"
@@ -62,6 +68,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "about": {
+                "type": ["string", "null"]
+              },
+              "emails": {
+                "type": ["array", "null"]
               },
               "coverPicture": {
                 "type": "string"
