@@ -17,7 +17,7 @@
             "type": "string"
           },
           "coverPicture": {
-            "type": "string"
+            "type": ["string", "null"]
           },
           "profilePicture": {
             "type": "string"
