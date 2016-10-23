@@ -25,6 +25,9 @@
           "description": {
             "type": ["string", "null"]
           },
+          "category": {
+            "type": ["string", "null"]
+          },
           "distance": {
             "type": "string"
           },
