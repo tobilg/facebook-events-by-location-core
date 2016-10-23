@@ -25,9 +25,6 @@
           "description": {
             "type": ["string", "null"]
           },
-          "category": {
-            "type": ["string", "null"]
-          },
           "distance": {
             "type": "string"
           },
@@ -39,6 +36,9 @@
           },
           "timeFromNow": {
             "type": "integer"
+          },
+          "category": {
+            "type": ["string", "null"]
           },
           "stats": {
             "type": "object",
