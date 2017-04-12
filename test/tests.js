@@ -29,7 +29,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
         it("should return a list of events for a popular coordinate (Brooklyn, NY)", function (done) {
 
             // Set timeout
-            this.timeout(5000);
+            this.timeout(10000);
 
             var es = new EventSearch({
                 "lat": 40.710803,
@@ -66,6 +66,9 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
         });
 
         it("should return a valid JSON schema", function (done) {
+
+            // Set timeout
+            this.timeout(10000);
 
             var schema = JSON.parse(fs.readFileSync(path.join(__dirname, "../", "schema", "events-response.schema.json"), "utf8"));
 
