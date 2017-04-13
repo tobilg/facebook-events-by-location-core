@@ -84,6 +84,12 @@
               "profilePicture": {
                 "type": "string"
               },
+              "category": {
+                "type": ["string", "null"]
+              },
+              "categoryList": {
+                "type": ["array", "null"]
+              },
               "location": {
                 "type": "object",
                 "properties": {
