@@ -8,7 +8,7 @@ This implementation uses regular Facebook Graph API calls in a three-step approa
 2. Use the places to query for their events in parallel (`/?ids={id1},{id2},{id3},...`)
 3. Unify, filter and sort the results from the parallel calls and return them to the client
 
-###Known limitations
+### Known limitations
 
 * The Graph API has some "instabilities" with search results. It's possible that the amount of results returned can vary between calls within seconds
 * The `/search` endpoint "magically" limits the number of results, independent from the `distance` used (larger distance doesn't guarantee more results)
@@ -73,42 +73,43 @@ Non-mandatory parameters
 ```javascript
 {
 	"events": [{
-        "id": "913797995409682",
-        "name": "Tom Misch at Baby's All Right - Brooklyn, NY",
+        "id": "194204067750547",
+        "name": "Jessica Hernandez & the Deltas at Baby's All Right",
         "type": "public",
-        "coverPicture": "https://scontent.xx.fbcdn.net/t31.0-8/q84/s720x720/13640856_1107200012651875_5165020515859707325_o.jpg",
-        "profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-0/c0.63.200.200/p200x200/13716257_1107200012651875_5165020515859707325_n.jpg?oh=840e5aa7e4c2a882d170934c06909b0f&oe=5852B03A",
-        "description": "Communion Music Presents\nTom Misch\n\nBaby's All Right - Saturday November 5\n\n**SOLD OUT**",
-        "distance": "103",
-        "startTime": "2016-11-05T19:00:00-0400",
-        "endTime": "2016-11-05T23:59:00-0400",
-        "timeFromNow": 6864534,
+        "coverPicture": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/17758407_10158752838305227_652819766277990370_o.jpg?oh=6f1076521abfe609f45c49f03b6ad3a7&oe=59978EB7",
+        "profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-0/c50.0.200.200/p200x200/17796620_10158752838305227_652819766277990370_n.jpg?oh=b8fd07b35c4f227e4837465e3abe7963&oe=594D43B4",
+        "description": "Tuesday June 13 @ Baby's All Right \n\nAdHoc Presents\n\nJessica Hernandez & The Deltas\n\nTIX: http://ticketf.ly/2oawOtz\n\n| Baby's All Right |\n146 Broadway @ Bedford Ave | Williamsburg, Brooklyn \nJMZ-Marcy, L-Bedford, G-Broadway | 7pm | $12+ | 18+\n\nSign up for the mailing list http://tinyurl.com/adhocfmlist\nSubscribe to our events http://facebook.com/adhocfm/events\n\nUpcoming AdHoc Shows\n\n04/13 Entrance (Guy Blakeslee), Ensalmo, Permanent Waves\n04/13 Kane West, Wharfwhit, Bruce Smear, Honnda\n04/14 Pharmakon (Record Release), Coteries, New Castrati\n04/15 Varsity, Fruit & Flowers, Petite League\n04/15 070Shake\n04/16 Lithics, Pucker Up, Bodega, Giggly Boys\n04/20 Helltrap Nightmare: the Hags Return\n04/20 The Coathangers \n04/21 The Coathangers\n04/22 Wolf Eyes (Record Release)\n04/22 Vatican Shadow\n04/23 Tonstartssbandht at The Park Church Co-op\n04/27 HAUX, Dizzy, Aisha Badru\n04/27 Sam Coffey & The Iron Lungs, Mikey Erg, The Othermen The Lame-Os\n04/27 Screaming Females\n04/28 Joakim, Starchild & The New Romantic\n04/28 Laser Background, Operator Music Band, Norwegian Arms, Railings\n04/29 White Lung\n05/02 Novelty Daughter, Elisa, Zenizen, Nicholas Nicholas\n05/03 The Revolution\n05/04 Emo Nite LA w/ special guests\n05/05 Omni, Honduras, Patio\n05/05 Ava Luna, Sammus, Mallrat\n05/05 Crushed (Record Release) w/ Sick Feeling, Neaux, Slashers\n05/05 Ava Luna, Sammus, Mall Rat\n05/05 Beanie Sigel, Manhattan Mal, Young Ros, Tim Wicked\n05/06 HOW SAD, Salt Cathedral\n05/06 Vagabon, Nnamdi Ogbonnaya, So Much Light\n05/07 Mega Bog, Tasseomancy\n05/09 Frank Carter & The Rattlesnakes, Dinosaur Pile-Up, Royal Republic\n05/09 Radkey\n05/09 Chastity at Shea Stadium\n05/09 Frank Carter & The Rattlesnakes, Dinosaur Pile-Up, Royal Republic\n05/10 Savoy Motel, Lionlimb\n05/10 Forest Swords, Actress, Umfang\n05/11 Tall Heights, Henry Jamison\n05/13 Alex Napping (Record Release), Pearer, gobbinjr, Long Neck\n05/13 Midnight Oil - SOLD OUT\n05/14 Midnight Oil\n05/14 Tall Juan (Record Release), Wild Yaks, Ben Katzman's Degreaser\n05/17 Sir Richard Bishop, Robert Millis at The Park Church Co-op\n05/18 Alex G \"Rocket\" Release Show at The Park Church Co-op – Sold Out\n05/18 Rex Orange County\n05/18 Highly Suspect\n05/19 Odwalla1221, Sadaf, Chicklette, Halfpet\n05/20 Adult Mom (Record Release) w/ B.B, Baby Grill\n05/20 Prawn, Mumblr, Wild Pink, Hard Pass\n05/20 Mumdance, Mr. Mitch, Shy Eyez\n05/20 Silent Servant, Not Waving, Pye Corner Audio, Via App\n05/24 Pixies - SOLD OUT\n05/24 Conan, North, False Gods\n05/25 The Walters, Palmas\n05/27 Elf Power, Sunwatchers\n05/27 Lil Debbie\n05/30 Pet Symmetry, Ratboys\n06/03 Chocolat, Bueno\n06/04 The Orbiting Human Circus featuring The Music Tapes\n06/06 Black Marble at Good Room\n06/08 Aldous Harding\n06/08 She-Devils\n06/08 Meatbodies\n06/08 Pelada, CL, Ciarra Black\n06/08 Elysia Crampton, Moor Mother, Total Freedom\n06/09 Girlpool, IAN Sweet, Lexie\n06/09 Mirah\n06/13 Jessica Hernandez & the Deltas\n06/14 Man Forever (Record Release)\n06/15 Sarah Shook & the Disarmers\n06/17 Orchin, Hellrazor, Model/Actriz, Maneka\n06/21 PWR BTTM, Tancred, Fits\n06/24 Julie Byrne at the Park Church Co-op\n07/11 Stolen Jars, Fraternal Twin, Thelma, Poppies\n07/27 Mark McGuire, Ancient Ocean",
+        "distance": "89",
+        "startTime": "2017-06-13T19:00:00-0400",
+        "endTime": "2017-06-13T23:00:00-0400",
+        "timeFromNow": 5302362,
+        "category": "MUSIC_EVENT",
         "stats": {
-            "attending": 118,
+            "attending": 3,
             "declined": 0,
-            "maybe": 193,
-            "noreply": 259
+            "maybe": 15,
+            "noreply": 0
         },
         "venue": {
             "id": "460616340718401",
             "name": "Baby's All Right",
             "about": "babysallright@gmail.com",
             "emails": ["babysallright@gmail.com"],
-            "coverPicture": "https://scontent.xx.fbcdn.net/v/t1.0-9/10649483_874901589289872_3338946923837693978_n.jpg?oh=f514ac7ee60c2a7e58158179686bef28&oe=584392F3",
-            "profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/1480734_642185745894792_5820988503650852577_n.png?oh=0ba9012178c119defae67c932d0841bd&oe=5847FD2D",
+            "coverPicture": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/16300274_1190598481053513_5678512810993788559_o.jpg?oh=dba6f85205e1c39c2b63ef34595116b3&oe=59587314",
+            "profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/1480734_642185745894792_5820988503650852577_n.png?oh=c1b2de32d966516538b97e2d3515af69&oe=5984652D",
+            "category": "Dance & Night Club",
+            "category_list": ["Dance & Night Club", "Breakfast & Brunch Restaurant"],
             "location": {
                 "city": "Brooklyn",
                 "country": "United States",
-                "latitude": 40.709985,
-                "longitude": -73.963476,
+                "latitude": 40.71012,
+                "longitude": -73.96348,
                 "state": "NY",
                 "street": "146 Broadway",
                 "zip": "11211"
             }
         }
-    },
-	... 
-	],
+    }],
 	"metadata": {
 		"venues": 1,
 		"venuesWithEvents": 1,
