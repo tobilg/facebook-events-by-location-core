@@ -80,6 +80,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
             });
 
             es.search().then( function (events) {
+                console.log("Found " + events.metadata.venues +" venues, thereof " + events.metadata.venuesWithEvents + " with events, and " + events.metadata.events + " events total!");
                 var validate = ajv.compile(schema);
                 var valid = validate(events);
                 return new Promise(function (resolve, reject) {
