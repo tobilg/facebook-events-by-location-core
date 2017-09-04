@@ -40,6 +40,20 @@
           "category": {
             "type": ["string", "null"]
           },
+          "ticketing": {
+            "type": "object",
+            "properties": {
+              "ticket_uri": {
+                "type": "string"
+              },
+              "terms_uri": {
+                "type": "string"
+              },
+              "privacy_uri": {
+                "type": "string"
+              }
+            }
+          },
           "stats": {
             "type": "object",
             "properties": {

@@ -31,37 +31,37 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
             // Set timeout
             this.timeout(10000);
 
-            var es = new EventSearch({
+            var es = new EventSearch();
+
+            es.search({
                 "lat": 40.710803,
                 "lng": -73.964040,
-                "distance": 1000,
+                "distance": 100,
                 "accessToken": accessToken
-            });
-
-            es.search().should.be.fulfilled.and.notify(done);
+            }).should.be.fulfilled.and.notify(done);
 
         });
 
         it("should return an error if no Access Token is present", function (done) {
 
-            var es = new EventSearch({
+            var es = new EventSearch();
+
+            es.search({
                 "lat": 40.710803,
                 "lng": -73.964040,
-                "distance": 1000
-            });
-
-            es.search().should.be.rejectedWith(1).and.notify(done);
+                "distance": 100
+            }).should.be.rejectedWith(1).and.notify(done);
 
         });
 
         it("should return an error if a partial coordinate is used", function (done) {
 
-            var es = new EventSearch({
+            var es = new EventSearch();
+
+            es.search({
                 "lat": 40.710803,
                 "accessToken": accessToken
-            });
-
-            es.search().should.be.rejectedWith(2).and.notify(done);
+            }).should.be.rejectedWith(2).and.notify(done);
 
         });
 
@@ -72,14 +72,14 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
 
             var schema = JSON.parse(fs.readFileSync(path.join(__dirname, "../", "schema", "events-response.schema.json"), "utf8"));
 
-            var es = new EventSearch({
+            var es = new EventSearch();
+
+            es.search({
                 "lat": 40.710803,
                 "lng": -73.964040,
-                "distance": 1000,
+                "distance": 100,
                 "accessToken": accessToken
-            });
-
-            es.search().then( function (events) {
+            }).then( function (events) {
                 console.log("Found " + events.metadata.venues +" venues, thereof " + events.metadata.venuesWithEvents + " with events, and " + events.metadata.events + " events total!");
                 var validate = ajv.compile(schema);
                 var valid = validate(events);
