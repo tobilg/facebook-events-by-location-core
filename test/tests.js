@@ -42,6 +42,23 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
 
         });
 
+        it("should work applying a sort parameter", function (done) {
+
+            // Set timeout
+            this.timeout(10000);
+
+            var es = new EventSearch();
+
+            es.search({
+                "lat": 40.710803,
+                "lng": -73.964040,
+                "distance": 100,
+                "accessToken": accessToken,
+                "sort": "distance"
+            }).should.be.fulfilled.and.notify(done);
+
+        });
+
         it("should return an error if no Access Token is present", function (done) {
 
             var es = new EventSearch();
