@@ -59,6 +59,42 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
 
         });
 
+        it("should work having place search categories", function (done) {
+
+            // Set timeout
+            this.timeout(10000);
+
+            var es = new EventSearch();
+
+            es.search({
+                "lat": 40.710803,
+                "lng": -73.964040,
+                "distance": 100,
+                "accessToken": accessToken,
+                "sort": "distance",
+                "categories": ["ARTS_ENTERTAINMENT", "EDUCATION"]
+            }).should.be.fulfilled.and.notify(done);
+
+        });
+
+        it("should filter out invalid place search categories", function (done) {
+
+            // Set timeout
+            this.timeout(10000);
+
+            var es = new EventSearch();
+
+            es.search({
+                "lat": 40.710803,
+                "lng": -73.964040,
+                "distance": 100,
+                "accessToken": accessToken,
+                "sort": "distance",
+                "categories": ["FOO", "BAR", "EDUCATION"]
+            }).should.be.fulfilled.and.notify(done);
+
+        });
+
         it("should return an error if no Access Token is present", function (done) {
 
             var es = new EventSearch();
