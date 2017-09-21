@@ -4,8 +4,8 @@ As Facebook has discontinued the FQL query API for all apps created after 2014-0
 
 This implementation uses regular Facebook Graph API calls in a three-step approach to get the events:
 
-1. Search for places in the radius of the passed coordinate and distance (`/search?type=place&q={query}&center={coordinate}&distance={distance}`)
-2. Use the places to query for their events in parallel (`/?ids={id1},{id2},{id3},...`)
+1. Search for Places in the radius of the passed coordinate and distance (`/search?type=place&q={query}&center={coordinate}&distance={distance}`). This returns Page objects.
+2. Use the returned Place Page objects to query for their events in parallel (`/?ids={id1},{id2},{id3},...`)
 3. Unify, filter and sort the results from the parallel calls and return them to the client
 
 ### Known limitations
@@ -65,9 +65,22 @@ Non-mandatory parameters
 * `accessToken`: The **App Access Token** to be used for the requests to the Graph API.
 * `distance`: The distance in meters (it makes sense to use smaller distances, like max. 2500). Default is `100`.
 * `sort`: The results can be sorted by `time`, `distance`, `venue` or `popularity`. If omitted, the events will be returned in the order they were received from the Graph API.
-* `version`: The version of the Graph API to use. Default is `v2.7`.
+* `version`: The version of the Graph API to use. Default is `v2.10`.
 * `since`: The start of the range to filter results. Format is Unix timestamp or `strtotime` data value, as accepted by [FB Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api#time).
 * `until`: The end of the range to filter results.
+
+### Location/Place data in the query result
+
+There are two types of locations in the resulting event JSON objects:
+
+* `place`: This is the consolidated Place object from the Venue (which is actually the Page object which was returned from the Place search), and the Event's place data. The latter will supersede the Place page data.
+* `venue.location`: This is the location data of the Page object.
+
+As the Facebook Graph API can only be queried for Places via coordinate/distance, and Events can have their own, "real" location, it's possible that the place data which is found in `place` can be outside the boundaries of the original query. 
+
+Consequences:
+* If you want consistency regarding query vs. results, you should use `venue.location`. 
+* If you want accuracy regarding the real event location, you should use `place`.  
 
 ### Sample output (shortened)
 
@@ -87,6 +100,19 @@ Non-mandatory parameters
 		"category": "MUSIC_EVENT",
 		"ticketing": {
 			"ticket_uri": "http://ticketf.ly/2wVV87f"
+		},
+		"place": {
+			"id": "460616340718401",
+			"name": "Baby's All Right",
+			"location": {
+				"city": "Brooklyn",
+				"country": "United States",
+				"latitude": 40.71012,
+				"longitude": -73.96348,
+				"state": "NY",
+				"street": "146 Broadway",
+				"zip": "11211"
+			}
 		},
 		"stats": {
 			"attending": 38,
