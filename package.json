@@ -9,7 +9,7 @@
     "location",
     "backend"
   ],
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": false,
   "scripts": {
     "test": "./node_modules/.bin/gulp ci",
@@ -20,7 +20,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "dotenv": "^4.0.0",
-    "request": "^2.81.0",
+    "request": "^2.82.0",
     "request-promise": "^4.2.1"
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "gulp-istanbul": "~1.0.0",
     "gulp-mocha": "~2.2.0",
     "publish-please": "~2.3.1",
-    "rimraf": "~2.6.1",
+    "rimraf": "^2.6.2",
     "run-sequence": "~2.1.0"
   },
   "bugs": {

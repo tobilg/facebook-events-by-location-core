@@ -52,7 +52,51 @@
               "privacy_uri": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
+          },
+          "place": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "location": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "latitude": {
+                    "type": "number"
+                  },
+                  "longitude": {
+                    "type": "number"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "street": {
+                    "type": "string"
+                  },
+                  "zip": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "latitude",
+                  "longitude"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
           },
           "stats": {
             "type": "object",
@@ -75,7 +119,8 @@
               "declined",
               "maybe",
               "noreply"
-            ]
+            ],
+            "additionalProperties": false
           },
           "venue": {
             "type": "object",
@@ -132,14 +177,16 @@
                 "required": [
                   "latitude",
                   "longitude"
-                ]
+                ],
+                "additionalProperties": false
               }
             },
             "required": [
               "id",
               "name",
               "location"
-            ]
+            ],
+            "additionalProperties": false
           }
         },
         "required": [
@@ -150,7 +197,8 @@
           "timeFromNow",
           "stats",
           "venue"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "metadata": {
@@ -170,11 +218,13 @@
         "venues",
         "venuesWithEvents",
         "events"
-      ]
+      ],
+      "additionalProperties": false
     }
   },
   "required": [
     "events",
     "metadata"
-  ]
+  ],
+  "additionalProperties": false
 }
