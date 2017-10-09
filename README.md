@@ -4,7 +4,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/tobilg/facebook-events-by-location-core.svg)](https://github.com/tobilg/facebook-events-by-location-core/network)
 [![GitHub stars](https://img.shields.io/github/stars/tobilg/facebook-events-by-location-core.svg)](https://github.com/tobilg/facebook-events-by-location-core/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/tobilg/facebook-events-by-location-core/master/LICENSE)
-[![npm](https://img.shields.io/npm/tobilg/facebook-events-by-location-core.svg)]()
+[![npm](https://img.shields.io/npm/v/facebook-events-by-location-core.svg)]()
+[![npm](https://img.shields.io/npm/dt/facebook-events-by-location-core.svg)]()
 
 As Facebook has discontinued the FQL query API for all apps created after 2014-04-30, it has gotten much more complicated to get public Facebook events by passing a location.
 
