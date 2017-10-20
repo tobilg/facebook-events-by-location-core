@@ -147,6 +147,40 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
 
         });
 
+        it("should filter inactive Events", function (done) {
+
+            // Set timeout
+            this.timeout(10000);
+
+            var es = new EventSearch();
+
+            es.search({
+                "lat": 40.710803,
+                "lng": -73.964040,
+                "distance": 100,
+                "accessToken": accessToken,
+                "showActiveOnly": true
+            }).then( function (eventsObj) {
+
+                var foundInactiveEvent = false;
+
+                eventsObj.events.forEach(function (event) {
+                    if (event.isCancelled || event.isDraft) {
+                        foundInactiveEvent = true;
+                    }
+                });
+
+                return new Promise(function (resolve, reject) {
+                    if (foundInactiveEvent) {
+                        reject("Found inactive Event when there should only be active Events!");
+                    } else {
+                        resolve(foundInactiveEvent);
+                    }
+                });
+            }).should.be.fulfilled.and.notify(done);
+
+        });
+
     });
 
 });

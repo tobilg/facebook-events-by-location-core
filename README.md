@@ -75,6 +75,7 @@ Non-mandatory parameters
 * `version`: The version of the Graph API to use. Default is `v2.10`.
 * `since`: The start of the range to filter results. Format is Unix timestamp or `strtotime` data value, as accepted by [FB Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api#time).
 * `until`: The end of the range to filter results.
+* `showActiveOnly`: Whether only non-cancelled, non-draft Events should be shown. Format is `boolean`. Default is `true`.
 
 ### Location/Place data in the query result
 
