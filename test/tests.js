@@ -138,6 +138,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
                 var valid = validate(events);
                 return new Promise(function (resolve, reject) {
                     if (!valid) {
+                        console.error(validate.errors);
                         reject(validate.errors);
                     } else {
                         resolve(valid);
