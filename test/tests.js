@@ -1,12 +1,8 @@
 "use strict";
 
-// Check if .env file exists, and load values. But do not fail if it doesn't!
-require('dotenv').config({silent: true});
-
 var EventSearch = require("../index");
 var path = require("path");
 var fs = require("fs");
-var Promise = require("bluebird");
 var chai = require("chai");
 var should = chai.should();
 var chaiAsPromised = require("chai-as-promised");
@@ -138,6 +134,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
                 var valid = validate(events);
                 return new Promise(function (resolve, reject) {
                     if (!valid) {
+                        console.error(validate.errors);
                         reject(validate.errors);
                     } else {
                         resolve(valid);
