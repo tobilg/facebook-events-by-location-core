@@ -38,7 +38,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
 
         });
 
-        it("should work applying a sort parameter", function (done) {
+        it("should work applying the 'eventDistance' sort parameter", function (done) {
 
             // Set timeout
             this.timeout(10000);
@@ -50,8 +50,45 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
                 "lng": -73.964040,
                 "distance": 100,
                 "accessToken": accessToken,
-                "sort": "distance"
+                "sort": "eventDistance"
             }).should.be.fulfilled.and.notify(done);
+
+        });
+
+        it("should work applying the 'venueDistance' sort parameter", function (done) {
+
+            // Set timeout
+            this.timeout(10000);
+
+            var es = new EventSearch();
+
+            es.search({
+                "lat": 40.710803,
+                "lng": -73.964040,
+                "distance": 100,
+                "accessToken": accessToken,
+                "sort": "venueDistance"
+            }).should.be.fulfilled.and.notify(done);
+
+        });
+
+        it("should return an error if an incorrect sort parameter was used", function (done) {
+
+            // Set timeout
+            this.timeout(10000);
+
+            var es = new EventSearch();
+
+            es.search({
+                "lat": 40.710803,
+                "lng": -73.964040,
+                "distance": 100,
+                "accessToken": accessToken,
+                "sort": "wrongSortOption"
+            }).should.be.rejectedWith({
+                "message": "An invalid sort option was passed: 'wrongSortOption'",
+                "code": 3
+            }).and.notify(done);
 
         });
 
@@ -85,7 +122,7 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
                 "lng": -73.964040,
                 "distance": 100,
                 "accessToken": accessToken,
-                "sort": "distance",
+                "sort": "venueDistance",
                 "categories": ["FOO", "BAR", "EDUCATION"]
             }).should.be.fulfilled.and.notify(done);
 
@@ -99,7 +136,10 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
                 "lat": 40.710803,
                 "lng": -73.964040,
                 "distance": 100
-            }).should.be.rejectedWith(1).and.notify(done);
+            }).should.be.rejectedWith({
+                "message": "Please specify the lat and lng parameters!",
+                "code": 1
+            }).and.notify(done);
 
         });
 
@@ -110,7 +150,10 @@ describe("# Testing the facebook-events-by-location-core functionality", functio
             es.search({
                 "lat": 40.710803,
                 "accessToken": accessToken
-            }).should.be.rejectedWith(2).and.notify(done);
+            }).should.be.rejectedWith({
+                "message": "Please specify an Access Token, either as environment variable or as accessToken parameter!",
+                "code": 2
+            }).and.notify(done);
 
         });
 
