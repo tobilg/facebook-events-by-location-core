@@ -34,6 +34,12 @@
           "endTime": {
             "type": ["string", "null"]
           },
+          "updatedTime": {
+            "type": ["string", "null"]
+          },
+          "timezone": {
+            "type": ["string", "null"]
+          },
           "timeFromNow": {
             "type": "integer"
           },
