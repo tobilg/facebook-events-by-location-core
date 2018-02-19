@@ -106,7 +106,6 @@ Consequences:
     "endTime": null,
     "timeFromNow": 9982924,
     "isCancelled": false,
-    "isDraft": false,
     "category": "MUSIC_EVENT",
     "ticketing": {
       "ticket_uri": "http://ticketf.ly/2j7AegO"
