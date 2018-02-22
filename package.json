@@ -9,10 +9,11 @@
     "location",
     "backend"
   ],
-  "version": "0.10.1",
+  "version": "0.10.2",
   "private": false,
   "scripts": {
     "test": "./node_modules/.bin/gulp ci",
+    "test-coverage": "./node_modules/.bin/gulp test",
     "test-publish": "./node_modules/.bin/gulp ci",
     "publish-please": "publish-please",
     "prepublish": "publish-please guard"
