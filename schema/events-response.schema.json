@@ -25,9 +25,6 @@
           "description": {
             "type": ["string", "null"]
           },
-          "distance": {
-            "type": "number"
-          },
           "startTime": {
             "type": "string"
           },
@@ -117,30 +114,6 @@
                 "additionalProperties": false
               }
             },
-            "additionalProperties": false
-          },
-          "stats": {
-            "type": "object",
-            "properties": {
-              "attending": {
-                "type": "integer"
-              },
-              "declined": {
-                "type": "integer"
-              },
-              "maybe": {
-                "type": "integer"
-              },
-              "noreply": {
-                "type": "integer"
-              }
-            },
-            "required": [
-              "attending",
-              "declined",
-              "maybe",
-              "noreply"
-            ],
             "additionalProperties": false
           },
           "venue": {

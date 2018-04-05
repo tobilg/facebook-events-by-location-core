@@ -102,7 +102,6 @@ Consequences:
     "coverPicture": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/24883312_1521878931228093_3223523563973203944_o.jpg?oh=9bc3e5c5d45e39c542b057b92df95243&oe=5AC0353F",
     "profilePicture": "https://scontent.xx.fbcdn.net/v/t1.0-0/c0.0.200.200/p200x200/24862268_1521878931228093_3223523563973203944_n.jpg?oh=23ec7dc943402ec7e0137f2d17f27719&oe=5AC246F8",
     "description": "Friday, April 13th @ Baby's All Right\n\nAdHoc Presents\n\nU.S. Girls\n\nTickets:  http://ticketf.ly/2j7AegO\n\n| Baby's All Right |\n146 Broadway @ Bedford Ave | Williamsburg, Brooklyn \nJMZ-Marcy, L-Bedford, G-Broadway | 8pm | $12 | 21+\n\nCheck out our calendar and sign up for our mailing list http://adhocpresents.com/",
-    "distance": 89,
     "startTime": "2018-04-13T20:00:00-0400",
     "endTime": null,
     "timeFromNow": 9982924,
@@ -123,12 +122,6 @@ Consequences:
         "street": "146 Broadway",
         "zip": "11211"
       }
-    },
-    "stats": {
-      "attending": 20,
-      "declined": 0,
-      "maybe": 77,
-      "noreply": 6
     },
     "distances": {
       "venue": 89,

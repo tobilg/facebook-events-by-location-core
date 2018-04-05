@@ -9,7 +9,7 @@
     "location",
     "backend"
   ],
-  "version": "0.10.2",
+  "version": "0.11.0",
   "private": false,
   "scripts": {
     "test": "./node_modules/.bin/gulp ci",
