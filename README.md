@@ -7,8 +7,13 @@
 [![npm](https://img.shields.io/npm/v/facebook-events-by-location-core.svg)]()
 [![npm](https://img.shields.io/npm/dt/facebook-events-by-location-core.svg)]()
 
+**Current FB issues**  
+This paackage is currently no longer usable, because FB changed the way one can access the event data. It seems that access to the Events API is no longer granted, see the lengthy discussion at #29. 
+
+**History**  
 As Facebook has discontinued the FQL query API for all apps created after 2014-04-30, it has gotten much more complicated to get public Facebook events by passing a location.
 
+**Workaround**   
 This implementation uses regular Facebook Graph API calls in a three-step approach to get the events:
 
 1. Search for Places in the radius of the passed coordinate and distance (`/search?type=place&q={query}&center={coordinate}&distance={distance}`). This returns Page objects.
