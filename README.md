@@ -8,7 +8,7 @@
 [![npm](https://img.shields.io/npm/dt/facebook-events-by-location-core.svg)]()
 
 **Current FB issues**  
-This paackage is currently no longer usable, because FB changed the way one can access the event data. It seems that access to the Events API is no longer granted, see the lengthy discussion at #29. 
+This package is currently no longer usable, because FB changed the way one can access the event data. It seems that access to the Events API is no longer granted, see the lengthy discussion at #29. 
 
 **History**  
 As Facebook has discontinued the FQL query API for all apps created after 2014-04-30, it has gotten much more complicated to get public Facebook events by passing a location.
