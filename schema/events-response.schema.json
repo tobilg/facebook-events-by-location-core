@@ -186,11 +186,9 @@
         "required": [
           "id",
           "name",
-          "distance",
           "startTime",
           "timeFromNow",
           "distances",
-          "stats",
           "venue"
         ],
         "additionalProperties": false
